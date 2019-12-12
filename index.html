@@ -2,14 +2,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javascript" src="viz.js"></script>
-
+    <script type="text/javascript" src="getData.js"></script>
+    
     <style>
-      body {text-align: center; margin: 20px;}
+      body {text-align: center; margin: 20px; padding-bottom: 100px;}
+      /* .wrapper {flex: 50%; padding: 10px;}
+      .row {display: flex;} */
     </style>
-
 
     <title>DCEG Challenge</title>
 </head>
@@ -19,8 +21,20 @@
 
         <div>
           <h1 style="color:rgba(53, 38, 38, 0.822)">NCI DCEG Internship Challenge</h1>
-          <h2></h2>
+          <h2>Submission by Anthony Xiang</h2>
+          <p>Exploring cancer data patterns through meaningful visualizations</p>
         </div>
+
+        <div>
+            <div id="barplot" style="width: 100%; height: 500px;"></div>    <!-- Plotly chart formed below is injected into this div -->
+            <script type="text/javascript" src="barplot.js"></script>
+
+            <br/>
+
+            <div id="barplotRace" style="width: 100%; height: 500px;"></div>    <!-- Plotly chart formed below is injected into this div -->
+            <script type="text/javascript" src="barplotRace.js"></script>
+        </div>
+        
 
     </div>
 </body>
