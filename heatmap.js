@@ -32,8 +32,7 @@ var heatPlot = [ // put each of the counts in, row for each
         ],
       x: Object.keys(getCounts("0 to 17", "age_group")),
       y: ["0 to 17", "18 to 29", "30 to 49", "50 to 69", "70 or Older"],
-      type: 'heatmap',
-      hoverongaps: false
+      type: 'heatmap'
     }
   ];
 
@@ -44,10 +43,6 @@ layout = {
     },
     xaxis: {
         title: "Cancer Types"
-    },
-    margin: {
-        b: 80,
-        t: 100
     },
     showlegend: true
 };
