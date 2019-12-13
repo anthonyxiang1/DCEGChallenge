@@ -5,7 +5,7 @@ for (var i = 0; i < data.length; i++) {
     costLists[data[i].ccs_diagnosis_description].push(Math.log(data[i].total_charges))
 }
 
-var plotData = []
+var violinPlot = []
 
 for (var i = 0; i < Object.keys(costLists).length; i++) {    // adds all of the cancer type plots to be displayed
     var temp = {
@@ -13,7 +13,7 @@ for (var i = 0; i < Object.keys(costLists).length; i++) {    // adds all of the 
         name: Object.keys(costLists)[i],
         type: 'violin'
     };
-    plotData.push(temp);
+    violinPlot.push(temp);
 }
 
 layout = {
@@ -33,4 +33,4 @@ layout = {
     showlegend: true
 };
   
-Plotly.newPlot('violin', plotData, layout);
+Plotly.newPlot('violin', violinPlot, layout);
