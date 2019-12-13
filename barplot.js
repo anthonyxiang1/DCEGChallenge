@@ -1,5 +1,5 @@
-var female = {};
-var male = {};
+var female = {}; // key value pair of cancer type : count
+var male = {};  // key value pair of cancer type : count
 
 for (var i = 0; i < data.length; i++) {
 
@@ -19,8 +19,8 @@ for (var i = 0; i < data.length; i++) {
 }
 
 var maleData = {
-    x: Object.keys(male),
-    y: Object.values(male),
+    x: Object.keys(male),  // cancer types
+    y: Object.values(male), // corresponding counts
     name: 'Male',
     marker: {color: 'rgb(26, 118, 255)'},
     type: 'bar'

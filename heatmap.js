@@ -2,7 +2,7 @@ var cancerTypes = []
 for (var i = 0; i < data.length; i++) {
     cancerTypes.push(data[i].ccs_diagnosis_description)
 }
-var typeList = [...new Set(cancerTypes)]
+var typeList = [...new Set(cancerTypes)] // ensure that each possible cancer type is included, so values aren't offset by missing ones
 
 function getCounts(str, category) {  // return an object with key-value pair of: cancer type: count for a given category (ie. race)
     var countObj = {}
@@ -22,7 +22,7 @@ function getCounts(str, category) {  // return an object with key-value pair of:
     return countObj
 }
 
-var heatPlot = [
+var heatPlot = [ // put each of the counts in, row for each 
     {
       z: [Object.values(getCounts("0 to 17", "age_group")), 
         Object.values(getCounts("18 to 29", "age_group")),
