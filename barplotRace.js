@@ -42,7 +42,13 @@ var plot = [plotData("Black/African American", 'race', '#003f5c'),
         title: "Counts",
       gridwidth: 2
     },
+    margin: {
+      b: 80,
+      t: 100
+    },
     barmode: 'stack'
   };
   
   Plotly.newPlot('barplotRace', plot, layout);
+
+
